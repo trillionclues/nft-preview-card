@@ -1,0 +1,151 @@
+:root {
+  --Very-dark-blue-body: hsl(217, 54%, 11%);
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  --Verydarkblue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  font-weight: 300;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: var(--Very-dark-blue-body);
+  color: var(--White);
+  padding: 1.25rem;
+}
+
+.description {
+  color: var(--Softblue);
+}
+
+.container {
+  padding: 1.25rem;
+  background-color: var(--Very-dark-blue-card);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.container .bg-img {
+  position: relative;
+}
+
+.container .bg-img img {
+  border-radius: 10px;
+}
+
+.container .bg-img .view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  background-color: var(--Cyan);
+  width: 100%;
+  height: 100%;
+  height: calc(100%-4px);
+  opacity: 0.2;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.container .bg-img .view:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container .bg-img .view img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container h2 {
+  color: var(--White);
+  margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.container h2:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--Verydarkblue-line);
+}
+
+.container ul li {
+  display: flex;
+  align-items: center;
+}
+
+.container ul li:first-child {
+  color: var(--Cyan);
+}
+
+.clock {
+  color: var(--Softblue);
+}
+
+.container ul li img {
+  margin-right: 0.5rem;
+}
+
+.container .nft-profile {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.container .nft-profile img {
+  width: 2.2rem;
+  border: 2px solid var(--White);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.container .nft-profile p {
+  color: var(--Softblue);
+}
+
+.container .nft-profile p span {
+  color: var(--White);
+  font-weight: 400;
+}
+
+.container .nft-profile p span:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+@media (min-width: 500px) {
+  .container {
+    width: 375px;
+    margin: 0 auto 1rem;
+  }
+}
